@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nishanth Kotla's Resume</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS CSS for scroll animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { 
+      font-family: 'Montserrat', sans-serif; 
+      background-color: #f9f9f9; 
+      color: #333; 
+    }
+    /* Navbar */
+    .navbar { 
+      background-color: #fff; 
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    }
+    .navbar-brand { font-weight: 600; }
+    .navbar-nav .nav-link { font-weight: 600; margin-left: 15px; }
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #FF6F61, #6B5B95);
+      color: #fff;
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      background: url('https://source.unsplash.com/1600x900/?office,work') no-repeat center center/cover;
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      opacity: 0.3;
+      z-index: -1;
+    }
+    .hero h1 { 
+      font-size: 3rem; 
+      font-weight: 600; 
+      margin-bottom: 10px; 
+    }
+    /* Custom Contact Header */
+    .contact-info { 
+      text-align: center; 
+      margin-bottom: 30px; 
+    }
+    .contact-info p { margin: 0.3rem; }
+    /* Section Titles */
+    .section-title {
+      font-size: 2rem; 
+      font-weight: 600; 
+      margin: 40px 0 20px; 
+      text-align: center;
+      display: inline-block; 
+      position: relative;
+    }
+    .section-title::after {
+      content: "";
+      width: 50%;
+      height: 3px;
+      background-color: #FF6F61;
+      position: absolute;
+      bottom: 0;
+      left: 25%;
+    }
+    /* Card Styles */
+    .card {
+      border: none; 
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: #fff;
+    }
+    .card:hover { 
+      transform: translateY(-5px); 
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+    }
+    .card-body { padding: 1.5rem; }
+    /* Footer */
+    footer {
+      background-color: #fff; 
+      padding: 20px 0;
+      box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    /* Formatted text styling */
+    .card-body h3 { margin-top: 2rem; }
+    .card-body p { margin-bottom: 1rem; }
+    .card-body ul { margin-left: 1.5rem; margin-bottom: 1rem; }
+    .card-body li { margin-bottom: 0.5rem; }
+    .card-body strong { color: #6B5B95; }
+    /* Remove PDF Button */
+    .remove-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Nishanth Kotla</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#publications">Patent & Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Custom Contact Info -->
+  <header class="hero" data-aos="fade-up">
+    <div class="container">
+      <h1>NISHANTH KOTLA</h1>
+      <div class="contact-info">
+        <p><strong>Phone:</strong> +1 (332) 285-8700</p>
+        <p>
+          <strong>Email:</strong> 
+          <a href="mailto:nishanthkotla29@gmail.com">nishanthkotla29@gmail.com</a> | 
+          <a href="mailto:nk3968@nyu.edu">nk3968@nyu.edu</a>
+        </p>
+        <p>
+          <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nishanth-kotla-484b46201/">Profile</a> | 
+          <strong>GitHub:</strong> <a href="https://github.com/Nishanth2969">Nishanth2969</a> | 
+          <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=tp8Ui7IAAAAJ&hl=en">Profile</a>
+        </p>
+      </div>
+    </div>
+    <!-- Remove PDF Button -->
+    <div class="remove-btn">
+      <a href="{% url 'remove_cv' %}" class="btn btn-danger btn-sm">Remove PDF</a>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <section class="py-5" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Curriculum Vitae</h2>
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <!-- Render the structured HTML from the PDF extraction -->
+          {{ pdf_html|safe }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="mb-0">© 2025 Nishanth Kotla. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle and AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>

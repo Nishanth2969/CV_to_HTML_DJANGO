@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nishanth Kotla Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- AOS CSS for scroll animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    /* Navbar */
+    .navbar {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .navbar-brand {
+      font-weight: 600;
+    }
+    .nav-link {
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #FF6F61;
+    }
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #FF6F61, #6B5B95);
+      color: #fff;
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      z-index: -1;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.25rem;
+    }
+    /* Section Titles */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 40px 0 20px;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .section-title::after {
+      content: "";
+      width: 50%;
+      height: 3px;
+      background-color: #FF6F61;
+      position: absolute;
+      bottom: 0;
+      left: 25%;
+    }
+    /* Card Styles */
+    .card {
+      border: none;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: #fff;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .card-body {
+      padding: 1.5rem;
+    }
+    /* Footer */
+    footer {
+      background-color: #fff;
+      padding: 20px 0;
+      box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Nishanth Kotla</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <div class="container" data-aos="fade-up">
+      <h1>Nishanth Kotla</h1>
+      <p class="lead">Graduate Research Assistant | Software Developer | Research Intern</p>
+      <div class="mt-4">
+        <a href="mailto:nishanthkotla29@gmail.com" class="btn btn-light me-2">
+          <i class="bi bi-envelope-fill"></i> Email
+        </a>
+        <a href="https://www.linkedin.com/in/nishanth-kotla-484b46201/" class="btn btn-light me-2">
+          <i class="bi bi-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/Nishanth2969" class="btn btn-light">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title text-center">About Me</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <p class="lead text-center">
+            I am a passionate researcher and developer with a strong foundation in computer science.
+            My journey spans from a Bachelor's from IIT Guwahati to a Master's at NYU Tandon,
+            where I explore innovative solutions bridging academia and industry.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Education Section -->
+  <section id="education" class="py-5 bg-light">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title text-center">Education</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">New York University, Tandon School of Engineering</h5>
+              <p class="card-text">
+                <strong>Master of Science in Computer Science</strong><br>
+                Sep 2024 - May 2026<br>
+                New York, USA<br>
+                Relevant Courses: Machine Learning, Algorithms, Database Systems, Deep Learning, Software Engineering, Big Data
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Indian Institute of Technology Guwahati</h5>
+              <p class="card-text">
+                <strong>Bachelor of Technology in Electronics and Communication</strong><br>
+                Jul 2020 - May 2024<br>
+                GPA: 8.35/10.0<br>
+                Relevant Courses: Deep Learning, Fundamentals Of AI, Image Processing, Fuzzy Logic and Neural Networks, Data Structures and Algorithms(+Lab),
+                Data-Driven System Theory, Probability and Random Processes, Financial Derivatives, Logical Reasoning
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Skills Section -->
+  <section id="skills" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title text-center">Skills</h2>
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p>
+            <strong>Programming Languages:</strong> Python, C++, JavaScript, SQL, C, HTML, CSS, NodeJS, Java<br>
+            <strong>Frameworks & Libraries:</strong> PyTorch, TensorFlow, ReactJS, Bootstrap, and more<br>
+            <strong>Tools & Technologies:</strong> GitHub, Docker, Kubernetes, Nvidia CUDA, Spark, Hadoop<br>
+            <strong>Cloud & Infrastructure:</strong> AWS, GCP, MySQL, Firebase, Azure
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Experience Section -->
+  <section id="experience" class="py-5 bg-light">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title text-center">Experience</h2>
+      <div class="mb-4">
+        <div class="card shadow-sm mb-3">
+          <div class="card-body">
+            <h5 class="card-title">New York University, Dr. Siddharth Garg</h5>
+            <p class="card-text">
+              <strong>Graduate Research Assistant</strong> - Sep 2024 – Present, New York, USA<br>
+              Pioneered research on domain-specific adaptations of SAT solvers and Computer Algebra Systems (CAS) to optimize hardware design processes;
+              enhanced High-Level Synthesis (HLS) methodologies. Assisting students in the ZERO to ASICs program with digital and analog circuit
+              concepts to strengthen hardware design knowledge.
+            </p>
+          </div>
+        </div>
+        <div class="card shadow-sm mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Indian Institute of Technology Guwahati, Dr. Anirban Dasgupta</h5>
+            <p class="card-text">
+              <strong>Research Assistant</strong> - Jul 2023 - Apr 2024, Guwahati, India<br>
+              Engineered a novel specialized video dataset simulating real-world driving conditions using PyTorch, TensorFlow, and Keras to track diverse
+              head movements, eye gazes, and facial expressions, and leveraged pre-trained networks and LSTM models to achieve over 97% accuracy in
+              real-time classification of distracted driving behaviors, optimizing model training time by 30% with Nvidia CUDA for efficient deployment.
+            </p>
+          </div>
+        </div>
+        <div class="card shadow-sm mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Adobe</h5>
+            <p class="card-text">
+              <strong>Research Intern</strong> - May 2023 - Aug 2023, Bengaluru, India<br>
+              Designed a framework using Python, PyTorch, and Hugging Face to optimize LLM efficiency, reducing costs by 40-90% and improving quality by
+              4-7% through cost optimization and latency reduction strategies.
+            </p>
+          </div>
+        </div>
+        <div class="card shadow-sm mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Kaustubha Medtech Private Limited</h5>
+            <p class="card-text">
+              <strong>Software Developer Intern</strong> - Mar 2023 – Apr 2023, Remote<br>
+              Developed a secure website using PHP and MySQL with user-friendly registration, login, and password reset features, achieving a response
+              time of less than 50ms, which increased user engagement by 60%. Also implemented a predictive analytics strategy for processing medical verification
+              requests, reducing verification time by 37% and saving over 30 hours per week.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Projects Section -->
+  <section id="projects" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title text-center">Projects</h2>
+      <div class="row">
+        <!-- HobbyHive -->
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">HobbyHive</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Aug 2024 - Oct 2024 | Group Project</h6>
+              <p class="card-text">
+                Built a <strong>full-stack social networking platform</strong> using <strong>Django</strong>, <strong>React</strong>, and <strong>PostgreSQL</strong>, allowing users to explore hobbies, post images, and create events, deployed on <strong>Azure</strong> for scalability and high availability. Implemented core features like <strong>user authentication</strong>, event scheduling, and a responsive UI, achieving <strong>95% test coverage</strong> with <strong>Pytest</strong> and <strong>Jest</strong>, and optimized API calls to reduce data retrieval time by <strong>30%</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Underwater Image Enhancement -->
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Underwater Image Enhancement</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Aug 2023 - Nov 2023 | Course Project, CS 590 - Deep Learning</h6>
+              <p class="card-text">
+                Formulated a <strong>groundbreaking underwater image enhancement algorithm</strong> utilizing <strong>OpenCV</strong> and <strong>TensorFlow</strong> to correct <strong>color distortions</strong> and <strong>low contrast</strong>, achieving a <strong>75% reduction</strong> in manual intervention, while employing <strong>Matplotlib</strong>, <strong>Seaborn</strong>, <strong>Numpy</strong>, and <strong>Pandas</strong> for detailed data analysis and visualization.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- PicProse: Visual Storyteller -->
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">PicProse: Visual Storyteller</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Feb 2023 - Mar 2023 | Personal Project</h6>
+              <p class="card-text">
+                Developed an innovative <strong>Image-to-Text model</strong> capable of generating <strong>descriptive narratives</strong> for real-world visual content. Leveraged pre-trained <strong>Inception V3</strong> as a <strong>CNN encoder</strong> to extract deep features and employed these as the initial state for an <strong>RNN</strong> with an <strong>LSTM text generator</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- BERTMinds Classifier -->
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">BERTMinds Classifier</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Jan 2023 - Feb 2023 | Personal Project</h6>
+              <p class="card-text">
+                Constructed a <strong>Gaussian Naive Bayes classifier</strong> using pre-trained <strong>BERT</strong> sentence embeddings as enriched features. Utilized <strong>sklearn</strong> for the classifier and <strong>PyTorch</strong> for BERT, testing on spam email detection and the IMDB movie reviews dataset.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Voice Commander-Pro -->
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Voice Commander-Pro</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Oct 2022 - Dec 2022 | Personal Project</h6>
+              <p class="card-text">
+                Developed an <strong>AI-based Python bot</strong> that responds to voice commands to perform predefined actions. Enhanced the bot to play music, tell jokes, and send birthday wishes on Facebook. Implemented scheduled joining for MS Teams meetings using browser credentials, utilizing <strong>Selenium Chromedriver</strong>, <strong>speech-recognition</strong>, <strong>Pyaudio</strong> for voice I/O, and <strong>Tkinter</strong> for GUI development.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- BingeBuddy -->
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">BingeBuddy</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Jul 2023 - Oct 2023 | Group Project</h6>
+              <p class="card-text">
+                Developed a <strong>cloud-native application</strong> using <strong>Vue.js</strong> and <strong>AWS</strong> services for a serverless architecture, enabling seamless scalability for over <strong>240</strong> users with <strong>99% uptime</strong>. Tracked users' movie and series engagements for over <strong>100 active users</strong>, provided personalized recommendations, showcased friends' activities, and incorporated a watch party feature facilitating over <strong>50 events</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Campus Trade Utopia: IITG Marketplace -->
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Campus Trade Utopia: IITG Marketplace</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Jun 2022 - Jul 2022 | Coding Club IIT Guwahati</h6>
+              <p class="card-text">
+                Led the development of a <strong>ReactJS</strong> marketplace web app for <strong>4,000</strong> IITG students, improving image upload speed by <strong>37%</strong> via GPU acceleration and integrating <strong>Firebase</strong> for secure authentication, achieving <strong>99% uptime</strong> and increasing user interaction by <strong>25%</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title text-center">Contact</h2>
+      <div class="card shadow-sm">
+        <div class="card-body text-center">
+          <p>
+            <strong>Email:</strong> <a href="mailto:nishanthkotla29@gmail.com">nishanthkotla29@gmail.com</a><br>
+            <strong>Email:</strong> <a href="mailto:nk3968@nyu.edu">nk3968@nyu.edu</a><br>
+            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nishanth-kotla-484b46201/">Nishanth Kotla</a><br>
+            <strong>GitHub:</strong> <a href="https://github.com/Nishanth2969">Nishanth2969</a><br>
+            <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=tp8Ui7IAAAAJ&amp;hl=en">View Profile</a><br>
+            <strong>ArXiv:</strong> <a href="https://arxiv.org/abs/2402.01742">View Publication</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    {% if upload_form %}
+  <div class="container mt-4">
+    <div class="alert alert-info text-center">
+      Your CV is not currently uploaded. Please upload your CV (PDF) below.
+    </div>
+    <form method="post" enctype="multipart/form-data" class="mb-5">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="cv_pdf" class="form-label">Upload Your CV (PDF):</label>
+        <input type="file" class="form-control" id="cv_pdf" name="cv_pdf" accept="application/pdf" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Upload CV</button>
+    </form>
+  </div>
+  {% endif %}
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="mb-0">© 2025 Nishanth Kotla. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap JS Bundle (with Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS for scroll animations -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
