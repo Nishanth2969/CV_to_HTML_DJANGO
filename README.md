@@ -20,45 +20,6 @@ This Django project converts your PDF resume into a structured HTML page. If a P
 - **Admin Interface:**  
   Access the Django admin at `/admin/` to manage the project.
 
-## Setup & Installation
-
-1. **Clone the Repository:**  
-   Clone this repository to your local machine.
-
-2. **Install Dependencies:**  
-   Navigate to the project folder and install required packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Generate a Secret Key:**  
-   Open a Python shell and run:
-   ```python
-   import secrets
-   print(secrets.token_urlsafe(50))
-   ```
-   Copy the generated key and update `pdf_to_html_project/settings.py`:
-   ```python
-   SECRET_KEY = 'YOUR_GENERATED_SECRET_KEY'
-   ```
-
-4. **Apply Migrations:**  
-   Run the migrations:
-   ```bash
-   python manage.py migrate
-   ```
-
-5. **Create a Superuser:**  
-   Create an admin account:
-   ```bash
-   python manage.py createsuperuser
-   ```
-
-6. **Run the Server:**  
-   Start the development server:
-   ```bash
-   python manage.py runserver
-   ```
 
 ## Usage
 
