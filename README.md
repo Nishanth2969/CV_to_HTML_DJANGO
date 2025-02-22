@@ -15,10 +15,7 @@ This Django project converts your PDF resume into a structured HTML page. If a P
   Provides an upload form to update your resume in PDF format and a button to remove the uploaded PDF.
 
 - **Responsive UI:**  
-  Styled with Bootstrap and animated using AOS for a modern look.
-
-- **Admin Interface:**  
-  Access the Django admin at `/admin/` to manage the project.
+  Styled with Bootstrap for a modern look.
 
 
 ## Usage
@@ -34,9 +31,6 @@ This Django project converts your PDF resume into a structured HTML page. If a P
 
 - **Remove the Uploaded PDF:**  
   Click the “Remove PDF” button (available in the header) to delete the currently uploaded PDF and revert back to the static resume view.
-
-- **Access Django Admin:**  
-  Visit `http://127.0.0.1:8000/admin/` and log in with your superuser credentials to manage the site.
 
 ## Technologies Used
 
